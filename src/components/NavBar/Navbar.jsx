@@ -15,17 +15,17 @@ const Navbar =()=>{
         <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#!">
-              Category A: Home
+              Home
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#!">
-              Category B: About
+              About
             </a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#!">
-              Category C: Contact
+              Contact
             </a>
           </li>
         </ul>
