@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import Navbar from './components/NavBar/Navbar'
+import Navbar from './components/NavBar/NavBar'
 
 // import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
