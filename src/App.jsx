@@ -1,22 +1,63 @@
+import { Route,BrowserRouter as Router, Routes }  from 'react-router-dom';
 import { useState } from 'react'
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Navbar from './components/NavBar/Navbar'
 
 // import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemCount from './components/ItemCount/ItemCount';
+import ItemList from './components/ItemList/ItemList';
+import Item from './components/Item/Item';
+import ItemDetail from './components/ItemDetail/ItemDetail';
 
 function App() {
 
   return (
-    <>
-    {/* Navbar with a cartwidget*/}
-
+<Router>
+  <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="container px-4 px-lg-5">
       <Navbar/>
-      {/* ItemListContainer with prop greeting*/}
-      <ItemListContainer greeting='Welcome to my shop'/>      
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+    </div>
+  </nav>
 
-    </>
+  <Routes>
+    <Route path='/' element={<ItemListContainer greeting='Welcome to my shop'/>}
+      />        
+      <Route path='/detail/:pid' element={<ItemDetailContainer/>}
+      />
+      <Route path='/categoria/:categoria' element={<ItemListContainer/>}
+      />
+</Routes>  
+</Router>
+
+
+    // <Router>
+    // {/* Navbar with a cartwidget*/}
+
+    //   <Navbar/>
+    //   <Routes>
+    //     <Route path='/' element={<ItemListContainer greeting='Welcome to my shop'/>}
+    //     />        
+    //     <Route path='/detail/:pid' element={<ItemDetailContainer/>}
+    //     />
+    //     <Route path='/categoria/:categoria' element={<ItemListContainer/>}
+    //     />
+
+    //   </Routes>      
+    // </Router>
   )
 }
 
