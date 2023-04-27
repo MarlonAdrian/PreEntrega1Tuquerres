@@ -7,25 +7,30 @@ import {mFetch} from "../../utils/mFetch"
 import ItemList from "../ItemList/ItemList"
 
 
-const ItemDetailContainer=({})=>{
+const ItemDetailContainer=()=>{
     const {pid}=useParams()
     const [products, setProducts]=useState([])
     const [isLoading, setIsLoading]=useState(true)
 
     useEffect(()=>{
-        if (!pid) {
-            <Item/>
-        } else {
-            mFetch()
-            .then(
-                productos=>setProducts(productos.filter(products=>products.pid===pid))
-            ).catch(
-                error=>console.error(error)
-            ).finally(()=>setIsLoading(false))
-            console.log(pid)
-        }
-    }, [pid])
-    
+        mFetch(pid)
+        .then(resp => setProducts(resp))
+        .catch(err => console.log(err))
+        .finally(()=> setIsLoading(false))
+    }, [])
+
+    console.log(pid)
+    return (
+        <div>
+            {isLoading ? 
+                <h2>Cargando...</h2>
+            :
+                <>
+                    <ItemDetail products={products} />
+                </>
+            }            
+        </div>
+    )
+  
 }
 export default ItemDetailContainer
-//enviar promesa para 

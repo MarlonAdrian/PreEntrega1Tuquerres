@@ -1,16 +1,11 @@
 import { Route,BrowserRouter as Router, Routes }  from 'react-router-dom';
-import { useState } from 'react'
 
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
 import Navbar from './components/NavBar/Navbar'
 
-// import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ItemCount from './components/ItemCount/ItemCount';
-import ItemList from './components/ItemList/ItemList';
-import Item from './components/Item/Item';
-import ItemDetail from './components/ItemDetail/ItemDetail';
+
 
 function App() {
 
@@ -40,24 +35,8 @@ function App() {
       />
       <Route path='/categoria/:categoria' element={<ItemListContainer/>}
       />
-</Routes>  
+  </Routes>  
 </Router>
-
-
-    // <Router>
-    // {/* Navbar with a cartwidget*/}
-
-    //   <Navbar/>
-    //   <Routes>
-    //     <Route path='/' element={<ItemListContainer greeting='Welcome to my shop'/>}
-    //     />        
-    //     <Route path='/detail/:pid' element={<ItemDetailContainer/>}
-    //     />
-    //     <Route path='/categoria/:categoria' element={<ItemListContainer/>}
-    //     />
-
-    //   </Routes>      
-    // </Router>
   )
 }
 

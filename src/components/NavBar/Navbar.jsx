@@ -20,17 +20,23 @@ const Navbar =()=>{
             </li>
           </Link>
 
-          <Link to={'/categoria/gorras'} className="nav-link" href='/categoria/chompas'>
+          <Link to={'/categoria/accesorios'} className="nav-link" href=''>
             <li className="nav-item">
-                Gorras
+                Accesorios
             </li>
           </Link>
 
-          <Link to={'/categoria/pantalones'} className="nav-link" href='/categoria/chompas'>
+          <Link to={'/categoria/hogar'} className="nav-link" href=''>
             <li className="nav-item">
-                Pantalones
+                Hogar
             </li>
           </Link>
+
+          <Link to={'/categoria/smartphones'} className="nav-link" href=''>
+            <li className="nav-item">
+                Smartphones
+            </li>
+          </Link>          
         </ul>
         {/*------Cartwidget-----*/}
         <CartWidget/>
