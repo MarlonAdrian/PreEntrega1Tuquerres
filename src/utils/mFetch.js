@@ -1,5 +1,5 @@
 let products =[
-    {id:'1',title:'DesktopwithParrotSO',description:'this is a description',price:10,  categoria:'hogar',foto:'https://imgs.search.brave.com/-RIVDIWHD-w4UVKLprESSSYHuURuDeNmpaHclk8QygA/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5w/Y2NlbnRyYWx0dC5j/b20vYXNzZXRzL3By/b2R1Y3RpbWFnZXMv/aW1nXzU4MTQyZTgw/YTY3OWYucG5n'},
+    {id:'1',title:'Desktop with Parrot SO',description:'this is a description',price:10,  categoria:'hogar',foto:'https://imgs.search.brave.com/-RIVDIWHD-w4UVKLprESSSYHuURuDeNmpaHclk8QygA/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5w/Y2NlbnRyYWx0dC5j/b20vYXNzZXRzL3By/b2R1Y3RpbWFnZXMv/aW1nXzU4MTQyZTgw/YTY3OWYucG5n'},
     {id:'2',title:'Speaker Zense 10/10',description:'es una descripcion',price:11, categoria:'hogar', foto:'https://point.com.ec/wp-content/uploads/2020/05/Parlante-300x300.jpg'},
     {id:'3',title:'Smart TV Panasonic 1990',description:'this is a description',price:12, categoria:'hogar', foto:'https://ecuador.solutekla.com/photo/1/panasonic/tvs/tv_3280cm_led_panaso_32d400hd/tv_3280cm_led_panaso_32d400hd_0001'},
     {id:'4',title:'Samsung XX',description:'this is a description',price:13,categoria:'smartphones', foto:'https://images.samsung.com/is/image/samsung/p6pim/latin/2302/gallery/latin-galaxy-s23-s916-sm-s916blikgto-thumb-534856605?$264_264_PNG$' },

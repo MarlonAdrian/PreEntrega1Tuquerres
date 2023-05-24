@@ -1,33 +1,40 @@
 import { useEffect, useState } from "react"
 import ItemDetail from "../ItemDetail/ItemDetail"
-import {Link, NavLink, useParams} from "react-router-dom"
-import Item from "../Item/Item"
-import ItemListContainer from "../ItemListContainer/ItemListContainer"
-import {mFetch} from "../../utils/mFetch"
-import ItemList from "../ItemList/ItemList"
-
+import {Link, useParams} from "react-router-dom"
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 
 const ItemDetailContainer=()=>{
     const {pid}=useParams()
-    const [products, setProducts]=useState([])
+    const [products, setProducts]=useState({})
     const [isLoading, setIsLoading]=useState(true)
 
-    useEffect(()=>{
-        mFetch(pid)
-        .then(resp => setProducts(resp))
+//----------------------Bring Data----------------
+useEffect(()=>{
+    const dbFirestore=getFirestore() //Connect to firestore
+    const queryDoc= doc(dbFirestore,'productos',pid)      
+    getDoc(queryDoc)
+        .then(resp=>{
+            if (resp.exists()) {
+                setProducts({id:resp.id, ... resp.data()})    
+                setIsLoading(false)
+            } else {
+                setIsLoading(true)
+            }})
         .catch(err => console.log(err))
-        .finally(()=> setIsLoading(false))
-    }, [])
+}, [])
 
-    console.log(pid)
     return (
         <div>
             {isLoading ? 
-                <h2>Cargando...</h2>
+                <center>
+                    <br />
+                        <h2>Producto no disponible</h2>
+                    <Link to={'/'}>
+                        <button className="btn btn-outline-dark">Regresar a Tienda</button>    
+                    </Link>
+                </center>
             :
-                <>
-                    <ItemDetail products={products} />
-                </>
+                <ItemDetail products={products}/>
             }            
         </div>
     )
