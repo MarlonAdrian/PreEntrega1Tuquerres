@@ -42,10 +42,6 @@ const ItemDetail=({products})=>{
                 </div>
             </section>
 
-                {/* <ItemCount onAdd={onAdd}/> */}
- 
-
-
         </center>
     )
 }
