@@ -24,12 +24,7 @@ const ItemListContainer=({greeting})=>{
             .finally(()=> setIsLoading(false)) 
 
         } else {
-            // mFetch()
-            // .then( resultado=> { 
-            //     setProducts(resultado.filter(products => products.categoria === categoria ))
-            // })
-            // .catch( error => console.log(error) )
-            // .finally(()=> setIsLoading(false))
+
     
             const queryCollectionFiltered=query(queryCollection, where('categoria','==',categoria))
             
