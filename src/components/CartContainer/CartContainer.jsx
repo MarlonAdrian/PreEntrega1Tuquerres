@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 export const CartContainer=()=>{
-    // const [id,setId]=useState('')
+
     const [dataForm, setDataForm] = useState({
         name: '',
         phone: '',
