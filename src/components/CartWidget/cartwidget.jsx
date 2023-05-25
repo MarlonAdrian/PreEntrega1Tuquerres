@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom"
-// import { useCartContext } from "../../context/CartContext"
-
 
 const CartWidget=()=>{
-    // const {cantidadTotal}=useCartContext()
+
     return(
         
     <form className="d-flex">
