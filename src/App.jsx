@@ -13,10 +13,6 @@ import { CartContextProvider } from './context/CartContext';
 import { CartContainer } from './components/CartContainer/CartContainer';
 function App() {
 
-  //-----CREACION DE CONTEXTO-----------
-  // const ContextoApps=createContext("holaaaaas!")
-  // console.log(ContextoApps)
-  //------------------------------------
 
   const [products, setProducts]=useState(mFetch);
 
