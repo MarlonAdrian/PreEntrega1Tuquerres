@@ -17,7 +17,6 @@ export const CartContextProvider=({children})=>{
                 newProduct
             ])  
         } else {
-            //cartList[idx].cantidad=cartList[idx].cantidad+newProduct.cantidad
             cartList[idx].cantidad+=newProduct.cantidad//lo mismo pero reducido
             setCartList([...cartList]) //no detecta cambio, por lo que se hace un nuevo array(está forzando al render)
         }
