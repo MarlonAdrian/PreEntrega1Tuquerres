@@ -21,7 +21,7 @@ export const formWithValidation=(WrappedComponent)=>{
         }
         
         return <WrappedComponent//retorna un componente
-            {...props} //pasarle las props que ya se tienen
+            {...props} //pasarle las props, que ya se tienen
             errors = {errors}
             validateForm={validateForm}
             />
