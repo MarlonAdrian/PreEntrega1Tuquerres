@@ -6,7 +6,7 @@ const Item= memo(({id,title,foto, price, categoria})=>{
 
     return(
         <div style={{
-            padding:'10px' //o quitarle
+            padding:'10px' 
         }}>
 <section className="py-5 bg-dark" >
     
