@@ -8,7 +8,7 @@ import { collection, getDocs, getFirestore, query, where } from "firebase/firest
 const ItemListContainer=({greeting})=>{
     const{categoria}=useParams()
     // console.log(categoria)
-    const [products, setProducts]=useState([]) //si está [] envés del {} saldrá error de funcion?
+    const [products, setProducts]=useState([]) 
     const [product, setProduct]=useState({})
     const [isLoading, setIsLoading]=useState(true)
 
