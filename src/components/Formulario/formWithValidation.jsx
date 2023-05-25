@@ -2,13 +2,6 @@ import { useState } from "react"
 
 export const formWithValidation=(WrappedComponent)=>{
 
-
-
-//este es el componente nuevo 7-29, con 2 funcionalidades,
-//validateForm, y el manejo de errores.
-//Esto llevará consigo la modificación de 2 nuevas funcionalidades
-//en el Form.jsx (erros y validateForm)
-//mejorando componente, creando 1ero un nuevo componente
     const FormWithValidation =(props)=>{
         const [errors, setErrors] = useState({})
         const validateForm = () => {
