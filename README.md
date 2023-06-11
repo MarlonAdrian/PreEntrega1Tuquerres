@@ -7,7 +7,7 @@
    - Finalmente, una vez finalizada la compra esta se conecta a **Firebase**, (que también trae consigo los datos de los productos que se encuentren almacenados en el mismo mediante **FireStore**).
 
 
-**2. Dependencias de Desarrollo
+**2. Dependencias de Desarrollo**
    - *"bootstrap": "^5.2.3"*,
    - *"firebase": "^9.21.0"*,
    - *"react": "^18.2.0"*,
@@ -15,5 +15,5 @@
    - *"react-router-dom": "^6.10.0"*,
    - *"startbootstrap-shop-homepage": "^5.0.6"*
    
-**3. Previsualización
+**3. Previsualización**
 
