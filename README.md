@@ -8,12 +8,12 @@
 
 
 **2. Dependencias de Desarrollo
-   - "bootstrap": "^5.2.3",
-   - "firebase": "^9.21.0",
-   - "react": "^18.2.0",
-   - "react-dom": "^18.2.0",
-   - "react-router-dom": "^6.10.0",
-   - "startbootstrap-shop-homepage": "^5.0.6"
+   - *"bootstrap": "^5.2.3"*,
+   - *"firebase": "^9.21.0"*,
+   - *"react": "^18.2.0"*,
+   - *"react-dom": "^18.2.0"*,
+   - *"react-router-dom": "^6.10.0"*,
+   - *"startbootstrap-shop-homepage": "^5.0.6"*
    
 **3. Previsualización
 
