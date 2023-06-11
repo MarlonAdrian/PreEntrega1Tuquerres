@@ -16,4 +16,5 @@
    - *"startbootstrap-shop-homepage": "^5.0.6"*
    
 **3. Previsualización**
+![Animation](https://github.com/MarlonAdrian/PreEntrega1Tuquerres/assets/66731201/1de4197b-9a42-4a4e-8713-e19f99b231f2)
 
