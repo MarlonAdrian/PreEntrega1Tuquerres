@@ -3,6 +3,7 @@ import { useCartContext } from "../../context/CartContext"
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
+
 export const CartContainer=()=>{
 
     const [dataForm, setDataForm] = useState({
@@ -16,7 +17,6 @@ export const CartContainer=()=>{
     const TotalPrice=()=>cartList.reduce((total,prod)=>total+=(prod.price*prod.cantidad),0)
 
     const makeOrder=(evt)=>{
-
         evt.preventDefault()
         console.log(TotalPrice)
         const order={}
@@ -24,16 +24,16 @@ export const CartContainer=()=>{
         order.items=cartList.map(({id,title,price,cantidad})=>({id,title,price,cantidad}))
         order.total=TotalPrice()
 
-        // document.getElementById( "elementID" )
-        //Insert order
+        //Insertar orden
         const dbFireStore=getFirestore()
         const ordersCollection=collection(dbFireStore,'orders') //collection recibe 2 argumentos.
 
         if (dataForm.email==dataForm.checkEmail) {
             addDoc(ordersCollection, order)
-            .then(
-                response=>alert('Gracias por su compra')
-                )
+            .then((docRef) => {
+                //ORDEN DE COMPRA
+                alert(`Gracias por preferirnos! Su orden de compra es ${docRef.id}`)
+            })
             .catch(err=>console.log(err))
             .finally(()=>{
                 CleanCart()
@@ -41,6 +41,7 @@ export const CartContainer=()=>{
         } else {
             alert('Los correos electrónicos no coinciden')
         }
+
         //Update Order
         // const queryDoc=doc(dbFireStore, productos,'rzhHb7H3PDA06TydInRd')
         // updateDoc(queryDoc,{
@@ -61,11 +62,12 @@ export const CartContainer=()=>{
         //     stock:20
         // })
         // batch.commit()
+
+
+
     }
 
     const handleOnChange = (evt)=>{
-        console.log('nombre del input',evt.target.name)
-        console.log('valor del input',evt.target.value)
         setDataForm({
             ...dataForm,
             [evt.target.name]: evt.target.value

@@ -3,9 +3,9 @@ import { useState } from "react";
 
 const ItemCount=({onAdd})=>{
     const [counter, setCounter ]=useState(1);//Este produce un nuevo render
-    useEffect(()=>{
-        console.log('Contadora:', counter)
-    },[counter])
+    // useEffect(()=>{
+    //     console.log('Contadora:', counter)
+    // },[counter])
     //increase counter
     const increase = () => {
         if(counter<5){

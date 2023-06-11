@@ -9,7 +9,6 @@ const ItemDetail=({products})=>{
 
     const onAdd=(cantidad)=>{
         addToCart( { ... products, cantidad } )//new
-        console.log('cantidad seleccionada del producto||: ',cantidad)
         setIsAmount(true)
         // return(amount)
     }
