@@ -5,3 +5,15 @@
    - Asimismo, los productos tendrán una **cantidad máxima de 5 veces a elegirse** (con un contador de cada uno de los productos).
    - Los productos cuando ya estén listos para comprarse, **el usuario deberá digitar el correo electrónico 2 veces** para corroborar que los valores sean iguales.
    - Finalmente, una vez finalizada la compra esta se conecta a **Firebase**, (que también trae consigo los datos de los productos que se encuentren almacenados en el mismo mediante **FireStore**).
+
+
+**2. Dependencias de Desarrollo
+   - "bootstrap": "^5.2.3",
+   - "firebase": "^9.21.0",
+   - "react": "^18.2.0",
+   - "react-dom": "^18.2.0",
+   - "react-router-dom": "^6.10.0",
+   - "startbootstrap-shop-homepage": "^5.0.6"
+   
+**3. Previsualización
+
